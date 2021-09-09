@@ -24,17 +24,17 @@ public class TouchInputHandler : MonoBehaviour, IDragHandler, IEndDragHandler, I
     {
         Debug.Log(_eventData.position);
         // Set the axis of the input according to the position of the touch on the screen.
-    //    Axis = Vector2.ClampMagnitude((_eventData.position - ScreenCenter) / JoystickMaxWidth, JoystickMaxWidth);
+        Axis = Vector2.ClampMagnitude((_eventData.position - ScreenCenter) / JoystickMaxWidth, JoystickMaxWidth);
         
         // Apply the deadzone effect after the handle has been placed
         // to prevent the handle from visually being stuck in the deadzone
-    //    Axis = (Axis.magnitude < deadzone) ? Vector2.zero : Axis;
+        Axis = (Axis.magnitude < deadzone) ? Vector2.zero : Axis;
     }
 
     public void OnEndDrag(PointerEventData _eventData)
     {
         // We have let go so reset the axis and the position of the handle
-    //    Axis = Vector2.zero;
+        Axis = Vector2.zero;
     }
 
     public void OnPointerDown(PointerEventData _eventData) => OnDrag(_eventData);
@@ -52,6 +52,5 @@ public class TouchInputHandler : MonoBehaviour, IDragHandler, IEndDragHandler, I
         {
             Axis = Vector2.zero;
         }
-        Debug.Log(Axis);
     }
 }

@@ -24,7 +24,7 @@ public class PlaneController : MonoBehaviour
 		if(_axis.magnitude > 0.001)
 		{
 			//calculating the rotation:
-			Vector3 targetRotUpdirection = cameraTransform.rotation * new Vector3(-_axis.x, -_axis.y);
+			Vector3 targetRotUpdirection = Vector3.Lerp(cameraTransform.up, cameraTransform.rotation * new Vector3(-_axis.x, -_axis.y), _axis.magnitude);
 			Debug.DrawLine(transform.position, transform.position + targetRotUpdirection, Color.green);
 			Vector3 targetRotForwardDirection = (cameraTransform.rotation * Quaternion.Euler(_axis.y * maxTurnAngle, _axis.x * -maxTurnAngle, 0)) * Vector3.forward;
 			Quaternion targetRot = Quaternion.LookRotation(targetRotForwardDirection, targetRotUpdirection);
@@ -44,7 +44,6 @@ public class PlaneController : MonoBehaviour
 	{
 		// Quaternion's Euler conversion results in (0-360)
 		// For torque, we need -180 to 180.
- 
 		return new Vector3
 		(
 			180.0f < _torque.x ? _torque.x - 360.0f : _torque.x,
