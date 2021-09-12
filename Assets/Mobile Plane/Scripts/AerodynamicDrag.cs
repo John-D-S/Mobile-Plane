@@ -19,9 +19,6 @@ public class AerodynamicDrag : MonoBehaviour
     {
         Vector3 localVelocity = transform.InverseTransformDirection(rb.velocity);
         Vector3 dragForce = Vector3.zero;
-        //dragForce.x = - directionalDragFactor.x * Mathf.Pow(localVelocity.x, 2) * 0.5f;
-        //dragForce.y = - directionalDragFactor.y * Mathf.Pow(localVelocity.y, 2) * 0.5f;
-        //dragForce.z = - directionalDragFactor.z * Mathf.Pow(localVelocity.z, 2) * 0.5f;
         dragForce.x = - directionalDragFactor.x * localVelocity.x;
         dragForce.y = - directionalDragFactor.y * localVelocity.y;
         dragForce.z = - directionalDragFactor.z * localVelocity.z;
