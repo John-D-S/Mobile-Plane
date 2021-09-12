@@ -1,0 +1,37 @@
+City Vehicles Pack v1.0
+
+Content:
+- Bus (5 different color variants)
+- Coach (5 different color variants)
+- Emergency vehicles (Ambulance, Air ambulance, Emergency Van, Firetruck)
+- Helicopter (5 different variants)
+- Pickup truck (5 different color variants)
+- Police vehicles (Police Car, Police SUV, Police Van, Police Helicopter)
+- Sedan (5 different color variants)
+- Step Van (5 different color variants)
+- SUV (5 different color variants)
+- Box Truck (5 different color variants)
+- Flatbed Truck (5 different color variants)
+- Fancy Van (2 different color variants)
+- Special vehicles (News Van, News Helicopter, Ice Cream Truck, Limousine, Taxi, Street Sweeper)
+
+City Vehicles Pack v1.1
+
+Changelog: 
+
+- Added 16 new vehicles
+
+*New Assets*
+
+- Hot Rod (6 different color variants)
+- Minivan (5 different color variants)
+- Microcar (5 different color variants)
+- 2 New SUVs (5 different color variants each)
+- 2 Coupes (5 different color variants each)
+- 2 Muscle Cars (5 different color variants each)
+- 2 Sport Cars (5 different color variants each)
+- 2 New Trucks (5 different color variants each)
+- 2 SWAT APCs
+- SWAT Tank
+
+
