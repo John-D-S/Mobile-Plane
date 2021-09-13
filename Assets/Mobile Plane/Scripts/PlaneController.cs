@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TouchInput;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -10,6 +11,8 @@ public class PlaneController : MonoBehaviour
 	[SerializeField] private float maxTurnAngle = 80;
 	[SerializeField] private float torque = 1;
 	[SerializeField] private float force = 5;
+
+	[SerializeField] private List<ParticleSystem> exhaustParticles;
 
 	private Rigidbody rb;
 
@@ -50,7 +53,27 @@ public class PlaneController : MonoBehaviour
 	
 	private void FixedUpdate()
 	{
-		rb.AddForce(transform.forward * force);
+		if(Input.GetKey(KeyCode.Space))
+		{
+			rb.AddForce(transform.forward * force);
+			for(int i = 0; i < exhaustParticles.Count; i++)
+			{
+				if(!exhaustParticles[i].isPlaying)
+				{
+					exhaustParticles[i].Play();
+				}
+			}
+		}
+		else
+		{
+			for(int i = 0; i < exhaustParticles.Count; i++)
+			{
+				if(exhaustParticles[i].isPlaying)
+				{
+					exhaustParticles[i].Stop();
+				}
+			}
+		}
 		if(TouchInputHandler.theTouchInputHandler)
 		{
 			ApplyControlTorque(TouchInputHandler.theTouchInputHandler.Axis);

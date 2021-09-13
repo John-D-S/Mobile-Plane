@@ -8,7 +8,10 @@ public class Hover : MonoBehaviour
     [SerializeField, Tooltip("The height above the object below it that this object will try to hover.")] private float targetHeight = 3;
     public float TargetHeight => targetHeight;
     [SerializeField, Tooltip("How much vertical drag will this gameObject have. This helps to prevent excessive bouncy oscillation.")] private float verticalDragModifier = 1;
+    [SerializeField] private float minAngleBetweenThrustNormals;
     private Rigidbody rb;
+
+    private Vector3 currentGlobalSurfaceNormal;
     
     /// <summary>
     /// The amount of upward force to apply to this gameobject
@@ -24,8 +27,11 @@ public class Hover : MonoBehaviour
                 // if the gameobject is above a collider, apply a force to hover.
                 if(Physics.Raycast(transform.position, -forceDirection, out hit,targetHeight * 2f, ~LayerMask.GetMask("Player")))
                 {
-                    float height = hit.distance;
-                    return (Mathf.Abs(Physics.gravity.y) * targetHeight / height - rb.velocity.y * verticalDragModifier) * forceDirection;
+                    if(Vector3.Angle(hit.normal, currentGlobalSurfaceNormal) > minAngleBetweenThrustNormals)
+                    {
+                        float height = hit.distance;
+                        return (Mathf.Abs(Physics.gravity.y) * targetHeight / height - rb.velocity.y * verticalDragModifier) * forceDirection;
+                    }
                 }
             }
             return Vector3.zero;
@@ -43,6 +49,7 @@ public class Hover : MonoBehaviour
                 // if the gameobject is above a collider, apply a force to hover.
                 if(Physics.Raycast(transform.position, -forceDirection, out hit,targetHeight * 2f, ~LayerMask.GetMask("Player")))
                 {
+                    currentGlobalSurfaceNormal = hit.normal;
                     float height = hit.distance;
                     return (Mathf.Abs(Physics.gravity.y) * targetHeight / height - rb.velocity.y * verticalDragModifier) * forceDirection;
                 }
