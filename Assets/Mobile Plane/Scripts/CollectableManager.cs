@@ -49,12 +49,12 @@ public class CollectableManager : MonoBehaviour
 		// update the text and bar to match the remaining number of keys.
 		if(collectableScoreDisplay)
 		{
-			collectableScoreDisplay.text = $"{numberOfCollectablesCollected} Collectables";
+			collectableScoreDisplay.text = $"Score: {numberOfCollectablesCollected}";
 		}
 
 		if(timeRemainingTextDisplay)
 		{
-			timeRemainingTextDisplay.text = $"{Mathf.Round(timeRemaining)}";
+			timeRemainingTextDisplay.text = $"Time remaining: {Mathf.Round(timeRemaining)}";
 		}
 	}
 }

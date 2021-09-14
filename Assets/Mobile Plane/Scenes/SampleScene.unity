@@ -1181,8 +1181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014ddc71d1768904f8fc9200ac615dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 737077947}
+  targetRigidbody: {fileID: 737077948}
   distanceToFollow: 2.5
+  minVelocityBeforeRotateBehindTarget: 1.5
+  zeroVelocityLerpSpeed: 0.025
 --- !u!1 &25361058
 GameObject:
   m_ObjectHideFlags: 0
@@ -10016,8 +10018,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18307,7 +18309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d25ffc2639162d48b26ef2fd7eaf2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionalDragFactor: {x: 1.5, y: 5, z: 0.2}
+  directionalDragFactor: {x: 1.5, y: 5, z: 0.225}
 --- !u!4 &737983407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e8a8b854692050548960feaabd1717be, type: 3}
@@ -24748,8 +24750,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -25079,7 +25081,7 @@ MonoBehaviour:
   timeRemainingTextDisplay: {fileID: 1008956397}
   timeRewardDepletionHalflife: 120
   initialRewardTime: 5
-  minimumRewardTime: 7.5
+  minimumRewardTime: 10
 --- !u!4 &1027763130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5808065849028296620, guid: d07aecc18047e294d953804a162fc3af, type: 3}
