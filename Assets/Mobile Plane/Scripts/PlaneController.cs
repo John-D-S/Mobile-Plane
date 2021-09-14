@@ -53,7 +53,7 @@ public class PlaneController : MonoBehaviour
 	
 	private void FixedUpdate()
 	{
-		if(Input.GetKey(KeyCode.Space))
+		if(Input.GetKey(KeyCode.Space) || true)
 		{
 			rb.AddForce(transform.forward * force);
 			for(int i = 0; i < exhaustParticles.Count; i++)

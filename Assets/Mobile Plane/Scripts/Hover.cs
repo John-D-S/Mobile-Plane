@@ -25,7 +25,7 @@ public class Hover : MonoBehaviour
                 Vector3 forceDirection = transform.up;
                 RaycastHit hit = new RaycastHit();
                 // if the gameobject is above a collider, apply a force to hover.
-                if(Physics.Raycast(transform.position, -forceDirection, out hit,targetHeight * 2f, ~LayerMask.GetMask("Player")))
+                if(Physics.Raycast(transform.position, -forceDirection, out hit,targetHeight * 2f, ~LayerMask.GetMask("Player", "Ignore Raycast")))
                 {
                     if(Vector3.Angle(hit.normal, currentGlobalSurfaceNormal) > minAngleBetweenThrustNormals)
                     {
@@ -47,7 +47,7 @@ public class Hover : MonoBehaviour
                 Vector3 forceDirection = Vector3.up;
                 RaycastHit hit = new RaycastHit();
                 // if the gameobject is above a collider, apply a force to hover.
-                if(Physics.Raycast(transform.position, -forceDirection, out hit,targetHeight * 2f, ~LayerMask.GetMask("Player")))
+                if(Physics.Raycast(transform.position, -forceDirection, out hit,targetHeight * 2f, ~LayerMask.GetMask("Player", "Ignore Raycast")))
                 {
                     currentGlobalSurfaceNormal = hit.normal;
                     float height = hit.distance;

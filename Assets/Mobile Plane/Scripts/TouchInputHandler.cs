@@ -10,7 +10,7 @@ namespace TouchInput
     {
         public static TouchInputHandler theTouchInputHandler;
         public Vector2 Axis { get; private set; } = Vector2.zero;
-
+        
         private Vector2 ScreenSize => new Vector2(Screen.width, Screen.height);
         private Vector2 ScreenCenter => new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
         private float JoystickMaxWidth => ScreenSize.x > ScreenSize.y ? ScreenSize.y : ScreenSize.x; 
