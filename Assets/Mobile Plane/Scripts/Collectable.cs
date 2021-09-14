@@ -35,7 +35,7 @@ public class Collectable : MonoBehaviour
 
     private IEnumerator SetFirstCollectable()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.02f);
         int firstCollectableIndex = UnityRandom.Range(0, allCollectables.Count);
         for(int i = 0; i < allCollectables.Count; i++)
         {

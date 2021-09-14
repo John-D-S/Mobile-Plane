@@ -18292,7 +18292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 963194228}
   maxTurnAngle: 80
-  torque: 0.4
+  torque: 0.25
   force: 6.5
   exhaustParticles:
   - {fileID: 819400120}
