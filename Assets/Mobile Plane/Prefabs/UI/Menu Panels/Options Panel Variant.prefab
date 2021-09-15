@@ -14,7 +14,7 @@ PrefabInstance:
     - target: {fileID: 7283071368584622137, guid: 53f562232846cd64da7bee01bae85020, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 7283071368584622142, guid: 53f562232846cd64da7bee01bae85020, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -981,6 +981,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2211457716044405774}
     m_Modifications:
+    - target: {fileID: 7452752588423475780, guid: 20c926d1f9890d048be8deb9f7b9bfa7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7452752588423475803, guid: 20c926d1f9890d048be8deb9f7b9bfa7, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
