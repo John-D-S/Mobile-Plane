@@ -1,5 +1,5 @@
 using System;
-
+using Saving;
 using TMPro;
 
 using UnityEngine;
@@ -37,6 +37,7 @@ public class CollectableManager : MonoBehaviour
 	{
 		theCollectableManager.numberOfCollectablesCollected++;
 		theCollectableManager.timeRemaining += theCollectableManager.TimeReward;
+		ScoreSystem.theScoreSystem.Score = theCollectableManager.numberOfCollectablesCollected;
 	}
 	
 	private void Update()
@@ -44,6 +45,7 @@ public class CollectableManager : MonoBehaviour
 		timeRemaining -= Time.deltaTime;
 		if(timeRemaining < 0)
 		{
+			ScoreSystem.theScoreSystem.SaveScore();
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}
 		// update the text and bar to match the remaining number of keys.
