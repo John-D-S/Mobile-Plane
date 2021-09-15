@@ -18,6 +18,12 @@ namespace TouchInput
         [SerializeField, Range(0, 1)] private float clampAmount = 1;
         [SerializeField] private bool alwaysWork;
 
+        private bool invertControls = false;
+        public void SetControlInversion(bool _value)
+        {
+            invertControls = _value;
+        }
+        
         public void Start()
         {
             theTouchInputHandler = this;
@@ -50,6 +56,7 @@ namespace TouchInput
                 Vector2 currentMousePosition = Input.mousePosition;
                 Axis = Vector2.ClampMagnitude((currentMousePosition - ScreenCenter) / JoystickMaxWidth * 2, clampAmount);
                 Axis = (Axis.magnitude < deadzone) ? Vector2.zero : Axis;
+                Axis = invertControls ? Axis : -Axis;
             }
             else
             {

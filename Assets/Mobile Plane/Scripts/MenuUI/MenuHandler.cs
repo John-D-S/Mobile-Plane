@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+
+using TouchInput;
+
 using UnityEngine.Audio;
 
 namespace Menu
@@ -40,7 +43,11 @@ namespace Menu
         [SerializeField, Tooltip("The pause/main menu that is not the options menu")]
         private GameObject HomeMenu;
 
-        #region Pausing
+        [Header("-- Control Stuff --")] 
+        [SerializeField, Tooltip("The thing that determines the controls.")]
+        private TouchInputHandler touchInput;
+        
+    #region Pausing
         private bool paused = false;
         public bool Paused
         {
@@ -183,6 +190,32 @@ namespace Menu
 
         #endregion
 
+        #region Controls
+
+            public void InvertControls(bool _value)
+            {
+                if(touchInput)
+                {
+                    touchInput.SetControlInversion(_value);
+                }
+                int playerPrefsVal = _value ? 1 : 0;
+                PlayerPrefs.SetInt("Invert Controls", playerPrefsVal);
+            }
+            
+            public void InitialiseControls()
+            {
+                if(touchInput)
+                {
+                    if(PlayerPrefs.HasKey("Invert Controls"))
+                    {
+                        bool invertControls = PlayerPrefs.GetInt("InvertControls") == 1 ? true : false;
+                        touchInput.SetControlInversion(invertControls);
+                    }
+                }
+            }
+
+        #endregion
+            
         #region SceneSwitching
         /// <summary>
         /// Loads the game scene
@@ -282,6 +315,7 @@ namespace Menu
 
         private void Start()
         {
+            InitialiseControls();
             InitializeVolume();
         }
 

@@ -21,6 +21,12 @@ namespace TouchInput
         [SerializeField, Range(0, 1)] private float deadzone = .25f;
         [SerializeField, Range(0, 1)] private float clampAmount = 1;
 
+        private bool invertControls = false;
+        public void SetControlInversion(bool _value)
+        {
+            invertControls = _value;
+        }
+        
         private void OnValidate()
         {
             if(handle && background)

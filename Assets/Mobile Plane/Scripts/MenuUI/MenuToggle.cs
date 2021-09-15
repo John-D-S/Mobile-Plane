@@ -7,7 +7,8 @@ namespace Menu
     public enum MenuToggleType
     {
         Fullscreen,
-        Mute
+        Mute,
+        InvertControls,
     }
 
     public class MenuToggle : MonoBehaviour
@@ -56,6 +57,12 @@ namespace Menu
                     else
                         toggle.isOn = false;
                     break;
+                case MenuToggleType.InvertControls:
+                    if (PlayerPrefs.HasKey("Invert Controls"))
+                        toggle.isOn = PlayerPrefs.GetInt("Invert Controls") == 1;
+                    else
+                        toggle.isOn = false;
+                    break;
                 default:
                     break;
             }
@@ -74,6 +81,9 @@ namespace Menu
                     break;
                 case MenuToggleType.Mute:
                     menuHandler.SetMute(_value);
+                    break;
+                case MenuToggleType.InvertControls:
+                    menuHandler.InvertControls(_value);
                     break;
                 default:
                     break;
