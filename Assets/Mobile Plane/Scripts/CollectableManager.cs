@@ -23,7 +23,7 @@ public class CollectableManager : MonoBehaviour
 
 	private void Awake()
 	{
-		timeRemaining = 2 * minimumRewardTime;
+		timeRemaining = 3 * minimumRewardTime;
 	}
 
 	private void Start()

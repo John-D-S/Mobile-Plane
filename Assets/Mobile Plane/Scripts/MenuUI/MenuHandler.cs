@@ -202,13 +202,13 @@ namespace Menu
                 PlayerPrefs.SetInt("Invert Controls", playerPrefsVal);
             }
             
-            public void InitialiseControls()
+            public void InitializeControls()
             {
                 if(touchInput)
                 {
                     if(PlayerPrefs.HasKey("Invert Controls"))
                     {
-                        bool invertControls = PlayerPrefs.GetInt("InvertControls") == 1 ? true : false;
+                        bool invertControls = PlayerPrefs.GetInt("Invert Controls") == 1;
                         touchInput.SetControlInversion(invertControls);
                     }
                 }
@@ -315,7 +315,7 @@ namespace Menu
 
         private void Start()
         {
-            InitialiseControls();
+            InitializeControls();
             InitializeVolume();
         }
 
