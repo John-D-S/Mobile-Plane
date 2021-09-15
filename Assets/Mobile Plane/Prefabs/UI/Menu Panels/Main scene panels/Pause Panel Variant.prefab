@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Enter Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
-  m_sharedMaterial: {fileID: -2491233369150868529, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -610,8 +610,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
-  m_sharedMaterial: {fileID: -2491233369150868529, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 3afdda92890a69e45a42c0ce99edbc80, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -941,8 +941,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Your Name:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
-  m_sharedMaterial: {fileID: -2491233369150868529, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1335,7 +1335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4098010356706971941, guid: 23695ac0c7596df46a1931be0e0f5b52, type: 3}
       propertyPath: m_Name
-      value: Menu Panel Variant
+      value: Pause Panel Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4098010356706971941, guid: 23695ac0c7596df46a1931be0e0f5b52, type: 3}
       propertyPath: m_IsActive
@@ -1400,7 +1400,7 @@ PrefabInstance:
     - target: {fileID: 8035228826822512158, guid: 23695ac0c7596df46a1931be0e0f5b52, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 4e62414614f013b49b87231cd077c13c, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8035228826822512158, guid: 23695ac0c7596df46a1931be0e0f5b52, type: 3}
       propertyPath: m_fontSizeMax
       value: 72
@@ -1412,7 +1412,7 @@ PrefabInstance:
     - target: {fileID: 8035228826822512158, guid: 23695ac0c7596df46a1931be0e0f5b52, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -6308872223085640408, guid: 4e62414614f013b49b87231cd077c13c, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8150218117474760290, guid: 23695ac0c7596df46a1931be0e0f5b52, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

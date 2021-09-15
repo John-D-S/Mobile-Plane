@@ -233,8 +233,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Reset HighScore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
-  m_sharedMaterial: {fileID: -2491233369150868529, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3afdda92890a69e45a42c0ce99edbc80, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
+  m_fontSize: 36
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -342,7 +342,7 @@ PrefabInstance:
     - target: {fileID: 845344629432939862, guid: 8a9b6146be875cf49b9bf1cf7703e3d4, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 4e62414614f013b49b87231cd077c13c, type: 2}
+      objectReference: {fileID: 11400000, guid: 155a49e89c9b4bf4d8b1c9a0b3a5f6b7, type: 2}
     - target: {fileID: 845344629432939862, guid: 8a9b6146be875cf49b9bf1cf7703e3d4, type: 3}
       propertyPath: m_fontSizeMax
       value: 72
@@ -354,7 +354,7 @@ PrefabInstance:
     - target: {fileID: 845344629432939862, guid: 8a9b6146be875cf49b9bf1cf7703e3d4, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -6308872223085640408, guid: 4e62414614f013b49b87231cd077c13c, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1523059242474884394, guid: 8a9b6146be875cf49b9bf1cf7703e3d4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -686,17 +686,13 @@ PrefabInstance:
       value: Music
       objectReference: {fileID: 0}
     - target: {fileID: 9176455934487571966, guid: 774c64792f51fba4c99ac375f164babb, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
-    - target: {fileID: 9176455934487571966, guid: 774c64792f51fba4c99ac375f164babb, type: 3}
       propertyPath: m_fontSizeBase
       value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 9176455934487571966, guid: 774c64792f51fba4c99ac375f164babb, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2491233369150868529, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 9176455935245404630, guid: 774c64792f51fba4c99ac375f164babb, type: 3}
       propertyPath: m_Name
       value: Music
@@ -914,7 +910,11 @@ PrefabInstance:
     - target: {fileID: 7283071368584622137, guid: 53f562232846cd64da7bee01bae85020, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283071368584622137, guid: 53f562232846cd64da7bee01bae85020, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7283071368584622142, guid: 53f562232846cd64da7bee01bae85020, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1124,6 +1124,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Return
       objectReference: {fileID: 0}
+    - target: {fileID: 4972283272231598743, guid: 40e642f5034dbbf46bf2de4d4800287e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3afdda92890a69e45a42c0ce99edbc80, type: 2}
     - target: {fileID: 4972283273237231090, guid: 40e642f5034dbbf46bf2de4d4800287e, type: 3}
       propertyPath: m_Name
       value: Return (1)
@@ -1238,9 +1242,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7452752588513913746, guid: 20c926d1f9890d048be8deb9f7b9bfa7, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 7452752588513913746, guid: 20c926d1f9890d048be8deb9f7b9bfa7, type: 3}
       propertyPath: m_fontSizeBase
       value: 36
@@ -1248,7 +1252,7 @@ PrefabInstance:
     - target: {fileID: 7452752588513913746, guid: 20c926d1f9890d048be8deb9f7b9bfa7, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2491233369150868529, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 7452752588950681069, guid: 20c926d1f9890d048be8deb9f7b9bfa7, type: 3}
       propertyPath: m_Name
       value: Dropdown
@@ -1351,17 +1355,13 @@ PrefabInstance:
       value: Fullscreen
       objectReference: {fileID: 0}
     - target: {fileID: 7283071368584622137, guid: 53f562232846cd64da7bee01bae85020, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
-    - target: {fileID: 7283071368584622137, guid: 53f562232846cd64da7bee01bae85020, type: 3}
       propertyPath: m_fontSizeBase
       value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7283071368584622137, guid: 53f562232846cd64da7bee01bae85020, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2491233369150868529, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 7283071368584622142, guid: 53f562232846cd64da7bee01bae85020, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1630,7 +1630,7 @@ PrefabInstance:
     - target: {fileID: 9176455934487571966, guid: 774c64792f51fba4c99ac375f164babb, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 9176455934487571966, guid: 774c64792f51fba4c99ac375f164babb, type: 3}
       propertyPath: m_fontSizeBase
       value: 36
@@ -1638,7 +1638,7 @@ PrefabInstance:
     - target: {fileID: 9176455934487571966, guid: 774c64792f51fba4c99ac375f164babb, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2491233369150868529, guid: ef91996fd7b065c47afdb4add08ab0d0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 9176455935245404630, guid: 774c64792f51fba4c99ac375f164babb, type: 3}
       propertyPath: m_Name
       value: SFX
