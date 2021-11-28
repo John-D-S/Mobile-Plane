@@ -186,6 +186,13 @@ namespace Menu
             PlayerPrefs.Save();
         }
 
+        public void SetAntiAliasing(bool antiAliasing)
+        {
+            QualitySettings.antiAliasing = antiAliasing ? 1 : 0;
+            PlayerPrefs.SetInt("Anti Aliasing", antiAliasing ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+
         #endregion
 
         #endregion
@@ -269,6 +276,15 @@ namespace Menu
             if (PlayerPrefs.HasKey("IsMuted"))
                 SetMute(PlayerPrefs.GetInt("IsMuted") == 1);
         }
+
+        /// <summary>
+        /// initializes the Anti Aliasing
+        /// </summary>
+        private void InitializeAntiAliasing()
+        {
+            if(PlayerPrefs.HasKey("Anti Aliasing"))
+                SetAntiAliasing(PlayerPrefs.GetInt("Anti Aliasing") == 1);
+        }
         #endregion
 
         #region Saving
@@ -317,6 +333,7 @@ namespace Menu
         {
             InitializeControls();
             InitializeVolume();
+            InitializeAntiAliasing();
         }
 
         private void Awake()

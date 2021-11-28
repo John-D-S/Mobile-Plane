@@ -9,6 +9,7 @@ namespace Menu
         Fullscreen,
         Mute,
         InvertControls,
+        AntiAliasing
     }
 
     public class MenuToggle : MonoBehaviour
@@ -63,6 +64,12 @@ namespace Menu
                     else
                         toggle.isOn = false;
                     break;
+                case MenuToggleType.AntiAliasing:
+                    if(PlayerPrefs.HasKey("Anti Aliasing"))
+                        toggle.isOn = PlayerPrefs.GetInt("Anti Aliasing") == 1;
+                    else
+                        toggle.isOn = false;
+                    break;
                 default:
                     break;
             }
@@ -84,6 +91,9 @@ namespace Menu
                     break;
                 case MenuToggleType.InvertControls:
                     menuHandler.InvertControls(_value);
+                    break;
+                case MenuToggleType.AntiAliasing:
+                    menuHandler.SetAntiAliasing(_value);
                     break;
                 default:
                     break;
