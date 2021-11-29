@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -188,7 +190,7 @@ namespace Menu
 
         public void SetAntiAliasing(bool antiAliasing)
         {
-            QualitySettings.antiAliasing = antiAliasing ? 1 : 0;
+            QualitySettings.antiAliasing = antiAliasing ? 4 : 0;
             PlayerPrefs.SetInt("Anti Aliasing", antiAliasing ? 1 : 0);
             PlayerPrefs.Save();
         }
