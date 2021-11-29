@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Attached to UI elements to display the name, position and score of a particular highscore
+/// </summary>
 [RequireComponent(typeof(RectTransform))]
 public class HighScoreListItem : MonoBehaviour
 {

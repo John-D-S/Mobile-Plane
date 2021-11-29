@@ -22,6 +22,9 @@ namespace Menu
         public static MenuHandler theMenuHandler;
     }
 
+    /// <summary>
+    /// Contains lots of functionality for changing settings, pausing, unpausing, initializing, and setting playerpref variables and saving scores.
+    /// </summary>
     public class MenuHandler : MonoBehaviour
     {
         [Header("-- Scene Name Variables --")]

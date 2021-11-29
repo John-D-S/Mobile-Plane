@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Applies a kind of drag to each axis of a rigidbody.
+/// </summary>
 [RequireComponent(typeof(Rigidbody))]
 public class AerodynamicDrag : MonoBehaviour
 {
-    [SerializeField] private Vector3 directionalDragFactor = Vector3.zero;
+    [SerializeField, Tooltip("how much should drag be applied on each axis")] private Vector3 directionalDragFactor = Vector3.zero;
 
     private Rigidbody rb;    
     // Start is called before the first frame update
@@ -15,6 +18,9 @@ public class AerodynamicDrag : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    /// <summary>
+    /// applies aerodynamic drag according to the directional drag factor
+    /// </summary>
     private void ApplyAerodynamicDrag()
     {
         Vector3 localVelocity = transform.InverseTransformDirection(rb.velocity);

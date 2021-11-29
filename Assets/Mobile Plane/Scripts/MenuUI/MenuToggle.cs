@@ -12,6 +12,9 @@ namespace Menu
         AntiAliasing
     }
 
+    /// <summary>
+    /// The Script that gives Toggles the ability to use the functionality in MenuHandler
+    /// </summary>
     public class MenuToggle : MonoBehaviour
     {
         [SerializeField]

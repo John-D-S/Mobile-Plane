@@ -15,6 +15,9 @@ namespace Menu
         Quit
     }
 
+    /// <summary>
+    /// The Script that gives Buttons the ability to use the functionality in MenuHandler
+    /// </summary>
     public class MenuButton : MonoBehaviour
     {
         [SerializeField, Tooltip("The Type of Button This Is")]

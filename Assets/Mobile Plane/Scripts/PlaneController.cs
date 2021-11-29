@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using TouchInput;
 using UnityEngine;
 
+/// <summary>
+/// allows the player to control the plane using physics
+/// </summary>
 [RequireComponent(typeof(Rigidbody))]
 public class PlaneController : MonoBehaviour
 {
@@ -21,6 +24,9 @@ public class PlaneController : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 	}
 
+	/// <summary>
+	/// applies torque to reach the given axis
+	/// </summary>
 	private void ApplyControlTorque(Vector2 _axis)
 	{
 		//calculating the rotation:
@@ -39,6 +45,9 @@ public class PlaneController : MonoBehaviour
 		rb.AddTorque(targetTorque * torque);
 	}
 	
+	/// <summary>
+	/// the euler amount of torque to rotate to the correct rotation
+	/// </summary>
 	private Vector3 OrientTorque(Vector3 _torque)
 	{
 		// Quaternion's Euler conversion results in (0-360)

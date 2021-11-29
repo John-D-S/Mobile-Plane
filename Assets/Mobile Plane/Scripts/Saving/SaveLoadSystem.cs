@@ -5,6 +5,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Saving
 {
+    /// <summary>
+    /// The SaveLoadSystem script is used to save, load and reset the gamedata using a binary file.
+    /// </summary>
     public class SaveLoadSystem : MonoBehaviour
     {
         public static SaveLoadSystem theSaveLoadSystem;

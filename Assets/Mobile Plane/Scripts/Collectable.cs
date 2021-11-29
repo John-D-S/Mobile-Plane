@@ -11,6 +11,9 @@ using UnityEngine;
 using UnityRandom = UnityEngine.Random;
 using Random = System.Random;
 
+/// <summary>
+/// the script that is attatched to collectables that the player can collect.
+/// </summary>
 public class Collectable : MonoBehaviour
 {
     [Header("-- Appearance Settings --")]
@@ -33,6 +36,9 @@ public class Collectable : MonoBehaviour
         allCollectables.Add(this);
     }
 
+    /// <summary>
+    /// set the first collectable
+    /// </summary>
     private IEnumerator SetFirstCollectable()
     {
         yield return new WaitForSeconds(0.02f);

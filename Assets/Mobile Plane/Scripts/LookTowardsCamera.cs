@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// a script that causes the gameobject to look towards the active camera
+/// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 public class LookTowardsCamera : MonoBehaviour
 {
-    [SerializeField] private bool disappearWhenCameraNear;
-    [SerializeField] private Vector2 cameraNearRange;
+    [SerializeField, Tooltip("Whether or not to dissappear when near the camera")] private bool disappearWhenCameraNear;
+    [SerializeField, Tooltip("How close to the camera before the renderer starts fading")] private Vector2 cameraNearRange;
     
     private SpriteRenderer spriteRenderer = new SpriteRenderer();
     

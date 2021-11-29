@@ -10,6 +10,9 @@ namespace Menu
         Sound_Effects    
     }
 
+    /// <summary>
+    /// The Script that gives Sliders the ability to use the functionality in MenuHandler
+    /// </summary>
     public class MenuSlider : MonoBehaviour
     {
         [SerializeField, Tooltip("What The Slider controls")]

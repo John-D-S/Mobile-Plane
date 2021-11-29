@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// applies a force to make the rigidbody hover over surfaces
+/// </summary>
 [RequireComponent(typeof(Rigidbody))]
 public class Hover : MonoBehaviour
 {
